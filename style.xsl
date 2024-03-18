@@ -1,4 +1,20 @@
-<!doctype html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xsl:stylesheet  [
+	<!ENTITY nbsp   "&#160;">
+	<!ENTITY copy   "&#169;">
+	<!ENTITY reg    "&#174;">
+	<!ENTITY trade  "&#8482;">
+	<!ENTITY mdash  "&#8212;">
+	<!ENTITY ldquo  "&#8220;">
+	<!ENTITY rdquo  "&#8221;"> 
+	<!ENTITY pound  "&#163;">
+	<!ENTITY yen    "&#165;">
+	<!ENTITY euro   "&#8364;">
+]>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html" encoding="utf-8" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"/>
+<xsl:template match="/">
+
 <html lang="en">
     <head>
         <title>Title</title>
@@ -53,6 +69,7 @@
                         </h2>
     
                         <div class="row">
+						<xsl:for-each select="pokedex/types/type">
                             <div class="col-4">
                                 <div class="card bg-dark border-white border-2 rounded-3 ">
                                     <div class="card-body ">
@@ -61,7 +78,8 @@
                                     </div>
                                 </div>   
                             </div>
-                            
+						</xsl:for-each>
+                           
                         </div>
                     </div>
                 </div>
@@ -88,8 +106,8 @@
                                             <li>SATK:</li>
                                         </ul>
                                         <ul class="list-inline m-0">
-                                            <li class="list-inline-item"><img src="img/grass_type.png" alt="grass type" class="rounded-1"></li>
-                                            <li class="list-inline-item"><img src="img/poison_type.png" alt="poison type" class="rounded-1"></li>
+                                            <li class="list-inline-item"><img src="img/grass_type.png" alt="grass type" class="rounded-1" /></li>
+                                            <li class="list-inline-item"><img src="img/poison_type.png" alt="poison type" class="rounded-1" /></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -107,7 +125,7 @@
                         </h4>
                     </div>
                     <div class="col-1">
-                        <img src="img/Pokeball.png" alt="">
+                        <img src="img/Pokeball.png" alt=""/>
                     </div>
                 </div>
             </footer>
@@ -126,3 +144,6 @@
         ></script>
     </body>
 </html>
+
+</xsl:template>
+</xsl:stylesheet>
