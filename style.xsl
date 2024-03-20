@@ -70,11 +70,11 @@
     
                         <div class="row">
 						<xsl:for-each select="pokedex/types/type">
-                            <div class="col-4">
+                            <div class="col-4 pt-2">
                                 <div class="card bg-dark border-white border-2 rounded-3 ">
-                                    <div class="card-body ">
-                                        <img src="img/bug_type.png" class="img-fluid rounded-top" alt="" />
-                                        <p class="card-text">bug</p>
+                                    <div class="card-body">
+                                        <img src="img{.}_types" class="img-fluid rounded-top" alt="" />
+                                        <p class="card-text">xsl:valueof </p>
                                     </div>
                                 </div>   
                             </div>
